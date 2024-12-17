@@ -1,0 +1,542 @@
+/*FONTS*/
+@font-face {
+  src: url(fonts/BBTMartiresFree-Regular.otf);
+  font-family: bbtreg;
+}
+@font-face {
+  src: url(fonts/BBTMartiresFree-Thin.otf);
+  font-family: bbthin;
+}
+@font-face {
+  src: url(fonts/AGENCYR.TTF);
+  font-family: agereg;
+}
+@font-face {
+  src: url(fonts/AGENCYB.TTF);
+  font-family: ageb;
+}
+@font-face {
+  src: url(fonts/bahnschrift.ttf);
+  font-family: bahn;
+}
+@font-face {
+  src: url(fonts/SalinRegular.otf);
+  font-family: salinreg;
+}
+@font-face {
+  src: url(fonts/FDEskwela.otf);
+  font-family: fde;
+}
+
+:root {
+  --black: #181818;
+  --red: #d01313;
+  --pink: #ff758f;
+  --white: #f9f9f9;
+}
+
+.text-red,
+.btn-red {
+  color: var(--red);
+}
+.text-pink {
+  color: var(--pink);
+}
+.text-white {
+  color: var(--white);
+}
+.icon-sz {
+  margin: 1rem 0;
+  width: 80px;
+  height: auto;
+}
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+/* SECTION-TEXT */
+.section-text p {
+  padding: 0 60px;
+  text-align: justify;
+  font-size: 1.4rem;
+}
+.thin-sep {
+  height: 2px;
+  background-color: var(--black);
+  width: 100px;
+  margin: 10% auto 0 auto;
+}
+
+/* General Styling */
+ul {
+  padding: 0;
+}
+ul li {
+  list-style: none;
+}
+body {
+  font-family: agereg;
+  color: var(--black);
+  background-color: var(--black);
+  cursor: default;
+}
+p,
+ul li {
+  font-size: 1.75rem;
+}
+h1 {
+  font-size: 3.2rem;
+  font-weight: bold;
+}
+h2 {
+  font-size: 2rem;
+}
+h4 {
+  margin: 0;
+}
+
+/* NAVIGATION BAR */
+.navbar .h1 {
+  font-size: 2rem;
+  color: var(--pink);
+  transition: color 0.3s ease;
+}
+.navbar .h1:hover {
+  color: var(--red);
+}
+.navbar h4 {
+  color: var(--pink);
+  transition: color 0.3s ease;
+}
+.navbar h4:hover {
+  color: var(--red);
+}
+
+#suggestions {
+  max-height: 200px;
+  overflow-y: auto;
+  background: var(--white);
+  border: 1px solid var(--pink);
+  z-index: 1000;
+  display: none;
+}
+
+#suggestions .list-group-item {
+  cursor: pointer;
+}
+
+#suggestions .list-group-item:hover {
+  background-color: var(--pink);
+  color: var(--white);
+}
+
+/* HERO SECTION */
+#title {
+  font-size: 5rem;
+  text-align: center;
+}
+#hero:hover {
+  cursor: default;
+}
+
+.dynamic-text {
+  font-weight: bold;
+  color: var(--pink);
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.dynamic-text.visible {
+  opacity: 1;
+}
+
+#hero {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: var(--white);
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.7);
+  overflow: hidden;
+}
+
+#hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+#hero video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -2;
+  opacity: 0.2;
+  object-position: 50% 20%;
+}
+
+.container {
+  z-index: 1;
+  text-align: center;
+}
+
+#hero .btn-red {
+  background-color: var(--red);
+  border: none;
+  color: var(--white);
+  width: 10rem;
+  transition: background-color 0.3s ease;
+}
+
+#hero .btn-red:hover {
+  background-color: var(--pink);
+}
+
+/* ABOUT-SECTION */
+
+#about {
+  padding: 10rem 0;
+}
+
+/* PROFILE-SECTION */
+/* heropic1
+heropic2-closeup
+heropic3-sideview*/
+
+.heropic1,
+.heropic-skills {
+  background: url(pictures/heropic1-bw.jpg) no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 400px;
+  position: relative;
+  background-position: 50% 26%;
+  opacity: 0.5;
+}
+.heropic2 {
+  background: url(pictures/heropic2.jpg);
+  background-position: 60% 30%;
+  height: 80px;
+  width: 100%;
+}
+
+.small-featured-img {
+  height: 80px;
+  width: 100%;
+  background-position: 70% 30%;
+}
+/*SKILLS */
+.heropic-skills {
+  background-position: 50% 90%;
+}
+
+/* FEATURES */
+/* creative designs */
+.gallery-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin: 20px;
+}
+.gallery-item {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  height: 275px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  border-radius: 10px;
+  box-shadow: -5px 3px 10px var(--pink);
+}
+
+.sketch0 {
+  background-image: url("pictures/sketch.jpg");
+  background-position: 50% 0%;
+}
+.sketch1 {
+  background-image: url("pictures/sketch1.jpg");
+  background-position: 50% 15%;
+  background-size: 80%;
+}
+.sketch2 {
+  background-image: url("pictures/sketch2.jpg");
+  background-position: 50% 30%;
+}
+.digital0 {
+  background: url("pictures/digital.jpg") no-repeat center center;
+  background-size: 100%;
+  background-position: 50% 40%;
+}
+.digital1 {
+  background: url("pictures/digital2.webp") no-repeat center center;
+  background-size: 105%;
+}
+.digital3 {
+  background: url("pictures/digital3.jpeg") no-repeat center center;
+  background-size: 125%;
+  background-position: 35% 100%;
+}
+.digital4 {
+  background-image: url("pictures/digital4.jpg");
+}
+.BYDClogo {
+  background: url("pictures/BYDC-LOGO.png") no-repeat center center;
+}
+.BSPlogo {
+  background: url("pictures/BSP-SHS-logo.png") no-repeat center center;
+}
+.SSlogo {
+  background: url("pictures/SS-logo2.png") no-repeat center center;
+}
+.Vinnologo {
+  background: url("pictures/Vinno-logowh.png") no-repeat center center;
+}
+.BYDClogo,
+.BSPlogo,
+.SSlogo,
+.Vinnologo {
+  background-size: 65%;
+}
+
+/* Modal Styles */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 35px;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(4px);
+  justify-content: center;
+  align-items: center;
+  overflow: auto;
+}
+
+.modal-content {
+  width: 30%;
+  height: fit-content;
+  object-fit: contain;
+  border-radius: 10px;
+}
+
+/* Close Button */
+.close {
+  position: absolute;
+  top: 20px;
+  right: 25px;
+  color: #f1f1f1;
+  font-size: 36px;
+  font-weight: bold;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+/* CYCLING-ADVENTURES */
+
+/* Dream Bike Section */
+.carousel-container {
+  position: relative;
+  width: 75%;
+  margin: 30px auto;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.carousel {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+  flex: 0 0 100%;
+  text-align: center;
+  background-size: cover;
+  background-position: center;
+  height: 500px;
+  color: var(--white);
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bike1 {
+  background-image: url("pictures/Red\ Bull\ BORA\ Tarmac\ SL8_LC_01.png");
+}
+
+.bike2 {
+  background-image: url("pictures/Red\ Bull\ BORA\ Tarmac\ SL8_LC_02.png");
+}
+
+.bike3 {
+  background-image: url("pictures/Red\ Bull\ BORA\ Tarmac\ SL8_LC_03.png");
+}
+
+.bike4 {
+  background-image: url("pictures/Red\ Bull\ BORA\ Tarmac\ SL8_LC_04.png");
+}
+
+.bike5 {
+  background-image: url("pictures/Red\ Bull\ BORA\ Tarmac\ SL8_LC_05.png");
+}
+.bike6 {
+  background-image: url("pictures/Red\ Bull\ BORA\ Tarmac\ SL8_LC_06.png");
+}
+
+button.prev,
+button.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+button.prev {
+  left: 10px;
+}
+
+button.next {
+  right: 10px;
+}
+
+button.prev:hover,
+button.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.close:hover,
+.close:focus {
+  color: #f44336;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#contact {
+  background-color: #f8f9fa;
+}
+
+#contact h1 {
+  color: #333;
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+#contact form {
+  background: #222;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: -5px 5px 5px rgba(0, 0, 0, 0.2);
+}
+
+#contact .btn-primary {
+  background-color: var(--pink);
+  border-color: var(--pink);
+  transition: background-color 0.3s ease;
+}
+
+#contact .btn-primary:hover {
+  background-color: var(--red);
+}
+
+#contact a img {
+  filter: grayscale(1);
+  transition: filter 0.3s ease;
+}
+
+#contact a:hover img {
+  filter: grayscale(0);
+}
+
+#contact .bi {
+  margin-right: 5px;
+}
+
+.card-title {
+  font-weight: bold;
+}
+
+/* Footer */
+footer {
+  background-color: var(--white);
+  border-top: 1px solid #eaeaea;
+}
+
+/*? MOBILE-LAYOUT */
+@media screen and (max-width: 768px) {
+  /** PROFILE-SECTION **/
+  .heropic1 {
+    display: none;
+  }
+  .heropic3 {
+    background-position: 50% 90%;
+  }
+  .heropic-skills {
+    background-size: 200%;
+  }
+  .small-featured-img {
+    width: 100%;
+    background-position: 64% 30%;
+  }
+
+  /** FEATURE-SECTION **/
+  .gallery-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .gallery-item {
+    height: 325px;
+  }
+  .sketch1 {
+    background-image: url(pictures/sketch1.jpg);
+    background-size: 125%;
+  }
+  .digital0 {
+    background-size: 115%;
+  }
+  .digital1 {
+    background-size: 125%;
+    background-color: black;
+  }
+  .digital3 {
+    background: url("pictures/digital3.jpeg") no-repeat center center;
+    background-color: black;
+    background-size: 210%;
+    background-position: 35% 50%;
+  }
+  .BYDClogo,
+  .BSPlogo,
+  .SSlogo,
+  .Vinnologo {
+    background-size: 95%;
+  }
+  .modal-content {
+    width: 80%;
+  }
+}

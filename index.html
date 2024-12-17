@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Code CADANCE</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
+      rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+    
+    <style>
+      /* COLOR PALLETE */
+      :root {
+        --black: #181818;
+        --red: #d01313;
+        --pink: #ff758f;
+        --white: #f9f9f9;
+      }
+    </style>
+  </head>
+  <body>
+    
+    <!-- NAVIGATION -->
+    <nav
+      class="navbar navbar-expand-lg navbar-light shadow-sm fixed-top"
+      style="background-color: var(--black)">
+      <div class="container">
+        <a class="navbar-brand" href="#hero">
+          <strong class="h1">Code C.A.D.A.N.C.E.</strong>
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+          style="background-color: var(--pink);"
+          >
+          <span class="navbar-toggler-icon""></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link text-dark" href="#about"> <h4>About</h4></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-dark" href="#features"
+                ><h4>Features</h4></a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-dark" href="#contact"><h4>Contact</h4></a>
+            </li>
+          </ul>
+          <form class="d-flex ms-3 position-relative" onsubmit="handleSearch(event)">
+            <input
+              id="search-bar"
+              type="text"
+              class="form-control"
+              placeholder="Search"
+              oninput="showSuggestions(this.value)"/>
+            <ul id="suggestions" class="list-group position-absolute w-100"></ul>
+          </form>
+        </div>
+      </div>
+    </nav>
+
+    <!-- MAIN SECTION -->
+    <section id="hero" class="text-center text-white">
+      <video autoplay loop muted id="hero-video">
+        <source src="video/herovid.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+
+      <div class="container">
+        <h1 class="fw-bold" id="title">
+          <span class="dynamic-text">Code C.A.D.A.N.C.E.</span>
+        </h1>
+        <p>Pedaling Through Projects, One Destination at a Time</p>
+        <a href="#about" class="btn btn-red mt-3">Lets Go!</a>
+      </div>
+    </section>
+
+
+    <!-- ABOUT SECTION-->
+    <section id="about" class="bg-light">
+      <div class="container fade-in">
+        <img src="icons/bicycle.png" alt="Bike Icon"
+        class="icon-sz">
+        <h1>Code C.A.D.A.N.C.E.</h1>
+        <p class="my-5">
+          a personal portfolio that reflects my passion for both cycling and coding. Much like cycling, web development is a journey of finding balance—where learning, overcoming challenges, and achieving harmony come together. This website represents the perfect blend of my artistic and technical approach, inspired by the rhythm of cycling. Here, design, creativity, coding, and my love for cycling all intersect, bringing my work to life in a unique and meaningful way.
+        </p>
+      </div>
+      <div class="thin-sep"></div>
+    </section> 
+    
+    
+    <!-- PROFILE SECTION -->
+    <section id="profile" class="bg-light ">
+      <div class="text-center">
+        <div class="profile-section fade-in">
+          <img src="icons/man.png" alt="Profile Icon" class="mb-4 icon-sz">
+          <h1>Profile</h1>
+
+          <div class="container-fluid ">
+          <div class="row">
+            <div class="col-md-8 heropic1 nopadding">
+            </div>
+            <div class="col-md-4 section-text nopadding">
+              <div>
+                <div class="small-featured-img heropic2">
+                </div>
+                <h2 class="frame pt-4" >Racel C. Rivera</h2>
+                <p style="font-size: 1.75rem;">
+                  a passionate <b>visual designer</b> and <b>digital artist</b> with a flair for creating stunning artworks and user-friendly web designs. Beyond the screen, I enjoy exploring the world on two wheels as a <b>dedicated cyclist</b> and challenging strategies as a <b>strategic gamer</b>.
+                </p>
+              </div>
+              
+            </div>
+          </div>
+
+
+          <!-- SKILLS-SECTION -->
+
+          <div class="row py-5">
+            <div class="col-md-4 section-text nopadding">
+              <div>
+                <img src="icons/gear.png" alt="Gear Icon" class="icon-sz" >
+                <h1>Skills</h1>
+                <p>
+                  <ul>
+                    <li>HTML & CSS</li>
+                    <li>Web Design & UX/UI</li>
+                    <li>Canva (for graphic design)</li>
+                    <li>Microsoft Word</li>
+                    <li>Microsoft Excel</li>
+                  </ul>
+                </p>
+
+              </div>
+              <div class="small-featured-img seat-black">
+              </div>
+            </div>
+            <div class="col-md-8 heropic-skills nopadding">
+            </div>
+          </div>
+        </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURES -->
+<section id="features" class="py-5 bg-light">
+  <div id="features" class="container">
+    <div class="text-center fade-in">
+      <img src="icons/frame.png" class="icon-sz" alt="Frame Icon">
+      <h1 class="fw-bold">Features</h1>
+      <p class="mb-5">Here are some of the highlights of my work:</p>
+    </div>
+    <div class="mt-3">
+      <!-- CREATIVE DESIGNS -->
+      <div class="fade-in">
+        <h3 class="mt-3 card-title">Creative Designs</h3>
+        <p>From traditional to digital art creations, I bring ideas to life through eye-catching visuals, collaborating with teams and clients on logo designs that result in memorable and impactful brand identities.</p>
+
+        <div class="gallery-container">
+          <div class="gallery-item sketch0" onclick="openImage(this)">
+          </div>
+          <div class="gallery-item sketch1" onclick="openImage(this)">
+          </div>
+          <div class="gallery-item sketch2" onclick="openImage(this)">
+          </div>
+          <div class="gallery-item digital0" onclick="openImage(this)">
+          </div>
+          <div class="gallery-item digital1" onclick="openImage(this)">
+          </div>
+          <div class="gallery-item digital3" onclick="openImage(this)">
+          </div>
+          <div class="gallery-item digital4" onclick="openImage(this)">
+          </div>
+          <div class="gallery-item BYDClogo" onclick="openImage(this)">
+          </div>
+          <div class="gallery-item BSPlogo" onclick="openImage(this)">
+          </div>
+          <div class="gallery-item SSlogo" onclick="openImage(this)">
+          </div>
+          <div class="gallery-item Vinnologo" onclick="openImage(this)">
+          </div>
+        </div>
+      </div>
+      <div class="thin-sep mb-5"></div>
+
+      <section id="dream-bike" class="py-5 bg-light text-center">
+        <div class="container">
+          <div class="fade-in">
+            <img src="icons/bike-path.png" style="width: 125px;" alt="Dream Bike Icon">
+            <h3 class="mt-3 card-title">Dream Bike</h3>
+            <p>A closer look at the details and aesthetics of my ultimate dream bike.</p>
+          </div>
+
+          <!-- DREAM BIKE -->
+          <div class="carousel-container fade-in">
+            <div class="carousel">
+              <div class="slide bike1"></div>
+              <div class="slide bike2"></div>
+              <div class="slide bike3"></div>
+              <div class="slide bike4"></div>
+              <div class="slide bike5"></div>
+              <div class="slide bike6"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+    </div>
+  </div>
+  <div class="thin-sep mb-5"></div>
+
+        <div id="imageModal" class="modal" onclick="closeModal()">
+          <span class="close">&times;</span>
+          <img id="modalImage" class="modal-content" />
+        </div>
+</section>
+
+    <!-- CONTACTS SECTION -->
+<section id="contact" class="py-5 bg-light">
+  <div class="container text-center fade-in">
+    <h1 class="mb-lg-5">Contacts</h1>
+    
+    <div class="row justify-content-center">
+      <!-- <div class="col-md-6">
+        <form>
+          <div class="mb-3">
+            <label for="name" class="form-label text-white">Your Name</label>
+            <input type="text" class="form-control" id="name" placeholder="Enter your name" required>
+          </div>
+          <div class="mb-3">
+            <label for="email" class="form-label text-white">Your Email</label>
+            <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+          </div>
+          <div class="mb-3">
+            <label for="message" class="form-label text-white">Message</label>
+            <textarea class="form-control" id="message" rows="4" placeholder="Enter your message" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Send Message</button>
+        </form>
+      </div> -->
+
+      <div class="col-md-4 mt-4 mt-md-0">
+        <h4 class="my-3">Follow Me</h4>
+        <div class="d-flex justify-content-center">
+          <a href="https://www.facebook.com/plainrasskun/" target="_blank" class="mx-2">
+            <img src="icons/facebook.png" alt="Facebook" width="30">
+          </a>
+          <a href="https://www.instagram.com/rasskun/" target="_blank" class="mx-2">
+            <img src="icons/instagram.png" alt="Instagram" width="30">
+          </a>
+        </div>
+        <h4 class="mt-4">Contact Info</h4>
+        <p><i class="bi bi-telephone"></i> +63917 627 7608</p>
+        <p><i class="bi bi-envelope"></i> racelrivera25@gmail.com</p>
+        <p><i class="bi bi-geo-alt"></i> Santolan, Pasig City, Philippines</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+    <footer class="bg-white text-center py-3 border-top">
+      <p class="mb-0">
+        &copy; 2024 Code C.A.D.A.N.C.E. | Coding Meets Cycling | RACEL C. RIVERA
+      </p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+    
+  </body>
+</html>
