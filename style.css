@@ -1,31 +1,7 @@
 /*FONTS*/
 @font-face {
-  src: url(fonts/BBTMartiresFree-Regular.otf);
-  font-family: bbtreg;
-}
-@font-face {
-  src: url(fonts/BBTMartiresFree-Thin.otf);
-  font-family: bbthin;
-}
-@font-face {
   src: url(fonts/AGENCYR.TTF);
   font-family: agereg;
-}
-@font-face {
-  src: url(fonts/AGENCYB.TTF);
-  font-family: ageb;
-}
-@font-face {
-  src: url(fonts/bahnschrift.ttf);
-  font-family: bahn;
-}
-@font-face {
-  src: url(fonts/SalinRegular.otf);
-  font-family: salinreg;
-}
-@font-face {
-  src: url(fonts/FDEskwela.otf);
-  font-family: fde;
 }
 
 :root {
@@ -194,6 +170,7 @@ h4 {
 .container {
   z-index: 1;
   text-align: center;
+  padding: 0 50px;
 }
 
 #hero .btn-red {
@@ -489,7 +466,7 @@ footer {
 }
 
 /*? MOBILE-LAYOUT */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 990px) {
   /** PROFILE-SECTION **/
   .heropic1 {
     display: none;
@@ -503,6 +480,9 @@ footer {
   .small-featured-img {
     width: 100%;
     background-position: 64% 30%;
+  }
+  #me {
+    width: inherit;
   }
 
   /** FEATURE-SECTION **/
