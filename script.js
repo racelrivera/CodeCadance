@@ -38,27 +38,23 @@ $(document).ready(function () {
   const suggestionsList = [
     "Home",
     "About",
-    "Name",
+    "Profile",
     "Skills",
     "Works",
     "Art",
-    "Portfolio",
+    "Features",
     "Contact",
-    "Address",
-    "Email",
   ];
 
   const sectionMap = {
     Home: "#hero",
     Works: "#features",
     Art: "#features",
-    Portfolio: "#features",
+    Features: "#features",
     About: "#about",
-    Name: "#profile",
+    Profile: "#profile",
     Skills: "#profile",
     Contact: "#contact",
-    Address: "#contact",
-    Email: "#contact",
   };
 
   $("#search-bar").on("input", function () {
@@ -84,7 +80,6 @@ $(document).ready(function () {
     const sectionId = sectionMap[selectedWord];
 
     if (sectionId) {
-      // Scroll to the section
       $("html, body").animate(
         {
           scrollTop: $(sectionId).offset().top,
@@ -184,8 +179,8 @@ document.addEventListener("DOMContentLoaded", () => {
   let currentIndex = 0;
 
   function nextSlide() {
-    currentIndex = (currentIndex + 1) % totalSlides; // Loop back to the start
-    const offset = currentIndex * -100; // Adjust the transform based on the current slide
+    currentIndex = (currentIndex + 1) % totalSlides;
+    const offset = currentIndex * -100;
     dreamBikeCarousel.style.transform = `translateX(${offset}%)`;
   }
 
